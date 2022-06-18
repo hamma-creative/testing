@@ -98,6 +98,12 @@ var track = document.getElementById('track');
 track.volume = 0.2;
 // track.autoplay = true;
 // track.loop = true;
+window.onload = (event) => {
+    setTimeout(() => {
+        track.play();
+      }, 500)
+};
+    
 
 var controlBtn = document.getElementById('play-pause');
 var home = document.getElementById('home');
@@ -116,7 +122,7 @@ function playPause() {
 }
 
 controlBtn.addEventListener("click", playPause); 
-home.addEventListener("click", playPause); 
+// home.addEventListener("click", playPause); 
 
 track.addEventListener("ended", function() {
     controlBtn.className = "play";
